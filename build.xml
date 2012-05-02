@@ -168,6 +168,10 @@ ${line.separator}"/>
         <ant dir="liferay-plugins-sdk" inheritAll="false">
             <target name="clean" />
         </ant>
+        
+        <ant dir="liferay-plugins-sdk/ext/" inheritAll="false">
+            <target name="clean" />
+        </ant>        
     </target>
 
     <target name="publish" description="Publishes the portal to the remote server" depends="dist">
