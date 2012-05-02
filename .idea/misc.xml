@@ -32,26 +32,44 @@
   </component>
   <component name="ProjectResources">
     <resource url="http://struts.apache.org/tags-bean" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-bean.tld" />
-    <resource url="http://java.sun.com/jsp/jstl/fmt" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/fmt.tld" />
-    <resource url="http://liferay.com/tld/ui" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-ui.tld" />
     <resource url="http://liferay.com/tld/util" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-util.tld" />
+    <resource url="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/hibernate-mapping-3.0.dtd" />
     <resource url="http://java.sun.com/jsp/jstl/sql" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/sql.tld" />
-    <resource url="http://liferay.com/tld/portlet" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-portlet-ext.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-display_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-display_6_1_0.dtd" />
     <resource url="http://liferay.com/tld/aui" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/aui.tld" />
-    <resource url="http://struts.apache.org/tags-logic" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-logic.tld" />
+    <resource url="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/web-app_2_4.xsd" />
     <resource url="http://java.sun.com/jsp/jstl/xml" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/x.tld" />
-    <resource url="http://java.sun.com/jsp/jstl/core" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/c.tld" />
-    <resource url="http://java.sun.com/portlet_2_0" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-portlet.tld" />
+    <resource url="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/web-app_2_5.xsd" />
     <resource url="http://struts.apache.org/tags-tiles" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-tiles.tld" />
-    <resource url="http://struts.apache.org/tags-bean-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-bean-el.tld" />
     <resource url="http://java.sun.com/jsp/jstl/functions" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/fn.tld" />
     <resource url="http://struts.apache.org/tags-logic-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-logic-el.tld" />
+    <resource url="http://struts.apache.org/dtds/tiles-config_1_1.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/tiles-config_1_1.dtd" />
     <resource url="http://struts.apache.org/tags-tiles-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-tiles-el.tld" />
-    <resource url="http://liferay.com/tld/faces" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-faces.tld" />
-    <resource url="http://struts.apache.org/tags-html" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-html.tld" />
-    <resource url="http://struts.apache.org/tags-html-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-html-el.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-layout-templates_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-layout-templates_6_1_0.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-social_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-social_6_1_0.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-skin_2_0_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-skin_2_0_0.dtd" />
     <resource url="http://struts.apache.org/tags-nested" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-nested.tld" />
+    <resource url="http:/java.sun.com/dtd/web-app_2_3.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/web-app_2_3.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-resource-action-mapping_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-resource-action-mapping_6_1_0.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-look-and-feel_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-look-and-feel_6_1_0.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-plugin-repository_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-plugin-repository_6_1_0.dtd" />
     <resource url="http://liferay.com/tld/security" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-security.tld" />
+    <resource url="http://liferay.com/tld/ui" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-ui.tld" />
+    <resource url="http://java.sun.com/jsp/jstl/fmt" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/fmt.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-theme-loader_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-theme-loader_6_1_0.dtd" />
+    <resource url="http://liferay.com/tld/portlet" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-portlet-ext.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-friendly-url-routes_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-friendly-url-routes_6_1_0.dtd" />
+    <resource url="http://struts.apache.org/tags-logic" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-logic.tld" />
+    <resource url="http://java.sun.com/jsp/jstl/core" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/c.tld" />
+    <resource url="http://java.sun.com/portlet_2_0" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-portlet.tld" />
+    <resource url="http://struts.apache.org/tags-bean-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-bean-el.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-portlet-app_6_1_0.dtd" />
+    <resource url="http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-service-builder_6_1_0.dtd" />
+    <resource url="http://liferay.com/tld/faces" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-faces.tld" />
+    <resource url="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/web-app_3_0.xsd" />
+    <resource url="http://struts.apache.org/tags-html-el" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-html-el.tld" />
+    <resource url="http://struts.apache.org/tags-html" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/struts-html.tld" />
+    <resource url="http://www.liferay.com/dtd/liferay-hook_6_1_0.dtd" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/dtd/liferay-hook_6_1_0.dtd" />
     <resource url="http://liferay.com/tld/theme" location="$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/tld/liferay-theme.tld" />
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
