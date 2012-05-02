@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/etc/etc.iml" filepath="$PROJECT_DIR$/etc/etc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/ext-impl.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/ext-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-service/ext-service.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-service/ext-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-bridges/ext-util-bridges.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-bridges/ext-util-bridges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-java/ext-util-java.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-java/ext-util-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-taglib/ext-util-taglib.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-util-taglib/ext-util-taglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-web/ext-web.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-web/ext-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liferay-plugins-sdk/portlets/test-portlet/test-portlet.iml" filepath="$PROJECT_DIR$/liferay-plugins-sdk/portlets/test-portlet/test-portlet.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/ccpp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/support-tomcat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/jtds.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/mysql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/postgresql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/portal-service.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/portlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/jutf7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/hsql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/commons-lang.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-bridges.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-taglib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
