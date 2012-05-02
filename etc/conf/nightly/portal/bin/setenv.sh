@@ -1,0 +1,1 @@
+CATALINA_OPTS="-Dsolr.url=http://localhost:8081/solr -Dfile.encoding=UTF8 -Djava.net.preferIPv4Stack=true -Duser.language=en -Duser.country=US -Duser.timezone=Europe/Amsterdam -Xmx1024m -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false"

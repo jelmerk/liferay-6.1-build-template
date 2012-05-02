@@ -1,0 +1,1 @@
+set CATALINA_OPTS=-Dexternal-properties=portal-developer.properties -Dfile.encoding=UTF8 -Djava.net.preferIPv4Stack=true -Duser.language=en -Duser.country=US -Duser.timezone=Europe/Amsterdam -Xmx1024m -XX:MaxPermSize=256m -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false

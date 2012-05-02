@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# /etc/init.d/liferay -- startup script for the Liferay portal
+#
+# Written by Jelmer Kuperus <jelmer.kuperus@orange11.nl>.
+#
+### BEGIN INIT INFO
+# Provides:          liferay
+# Required-Start:    $local_fs $remote_fs $network
+# Required-Stop:     $local_fs $remote_fs $network
+# Should-Start:      $named
+# Should-Stop:       $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start Liferay.
+# Description:       Start the Liferay portal.
+### END INIT INFO
+
+TOMCAT_USER=liferay
+
+export CATALINA_HOME="/usr/local/liferay/apache-tomcat"
+export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+
+case "$1" in
+ start)
+    echo $"Starting Liferay"
+    su $TOMCAT_USER -c "cd $CATALINA_HOME/bin && ./startup.sh"
+    ;;
+ stop)
+    echo $"Stopping Liferay"
+    su $TOMCAT_USER -c "cd $CATALINA_HOME/bin && ./shutdown.sh"
+    ;;
+ *)
+    echo "Usage: `basename $0` {start|stop}"
+    exit 1
+    ;;
+esac

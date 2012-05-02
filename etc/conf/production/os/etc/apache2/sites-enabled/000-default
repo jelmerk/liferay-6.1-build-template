@@ -1,0 +1,34 @@
+<VirtualHost *:80>
+        ServerName www.yourportal.com
+        ServerAdmin admin@yourportal.com
+
+        DocumentRoot /var/www
+
+        # redirect urls with groupnames in them to ones that without
+        RewriteEngine on
+        RewriteRule ^/web/guest(.*) $1 [R=301,L]
+
+        # redirect http://yourportal.com to http://www.yourportal.com
+        RewriteCond %{HTTP_HOST}   !^www\.yourportal\.com [NC]
+        RewriteCond %{HTTP_HOST}   !^$
+        RewriteRule ^/(.*)         http://www.yourportal.com/$1 [R=301,L]
+
+        ProxyPreserveHost on
+
+        # used as error document so needs to be unproxied
+        ProxyPass /updating.html !
+
+        ProxyPass / ajp://localhost:8009/ nocanon
+        ProxyPassReverse / ajp://localhost:8009/ nocanon
+
+        ErrorLog /var/log/apache2/error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+
+        # what to show when tomcat is down
+        ErrorDocument 503  /updating.html
+</VirtualHost>

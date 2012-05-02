@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<project name="portal" default="build">
+
+    <property file="${user.home}/build.properties" />
+    <property file="build.properties" />
+
+    <path id="project.path">
+        <pathelement path="${basedir}"/> 
+    </path>
+    
+    <pathconvert targetos="unix" property="project.dir" refid="project.path"/>
+    
+    <property name="build.dir" value="${project.dir}/build" />
+    <property name="build.portal.dir" value="${build.dir}/portal" />
+    <property name="build.portal.src.dir" value="${build.dir}/liferay-portal-src" />
+    <property name="build.downloads.dir" value="${build.dir}/downloads" />
+    <property name="dist.dir" value="${project.dir}/dist" />
+    <property name="etc.dir" value="${project.dir}/etc" />
+    <property name="conf.dir" value="${etc.dir}/conf" />
+    <property name="patches.dir" value="${etc.dir}/patches" />
+    <property name="tomcat.home.dir" value="${build.portal.dir}/apache-tomcat"/>
+
+    <target name="init">
+        <mkdir dir="${build.dir}" />
+        <mkdir dir="${build.downloads.dir}" />
+    </target>
+    
+    <target name="download-liferay-sources">
+        <get src="${build.liferay.src.download.url}"
+             dest="${build.downloads.dir}/liferay-portal-src.zip" usetimestamp="true" />
+    </target>
+
+    <target name="unzip-liferay-sources">
+        <unzip src="${build.downloads.dir}/liferay-portal-src.zip" dest="${build.dir}" overwrite="true"/>
+    </target>
+    
+    <target name="patch-liferay-sources">
+        <!-- Apply patches to the liferay portal source files here
+        
+        <patch dir="${build.portal.src.dir}" patchfile="${patches.dir}/LPS-12345.patch" strip="1" />
+        
+        -->
+    </target>
+
+    <target name="download-tomcat">
+        <get src="${build.tomcat.bin.download.url}" dest="${build.downloads.dir}/tomcat.zip" usetimestamp="true" />
+    </target>
+
+    <target name="unzip-tomcat" depends="download-tomcat">
+        <unzip src="${build.downloads.dir}/tomcat.zip" dest="${build.portal.dir}">
+            <regexpmapper from="^apache-tomcat-[^/]+/(.*)$" to="apache-tomcat/\1"/>
+        </unzip>
+    </target>
+    
+    <target name="select-environment">
+        <echo message="
+Environments:${line.separator}
+development - used for developer machines${line.separator}
+nightly     - used for testing (nightly environment)${line.separator}
+production  - used for production${line.separator}
+${line.separator}"/>
+        <input message="Configure for which environment ?"
+               validargs="development,nightly,production" addproperty="environment.name" defaultvalue="development"/>
+    </target>
+    
+    <target name="configure-build">
+        <echo file="${basedir}/liferay-plugins-sdk/build.${user.name}.properties">
+            app.server.dir=${tomcat.home.dir}
+
+            ext.work.dir=${build.portal.dir}
+            app.server.zip.name=${build.downloads.dir}/tomcat.zip
+
+            ant.build.javac.source=1.6
+            ant.build.javac.target=1.6
+        </echo>
+    
+        <echo file="${build.portal.src.dir}/build.${user.name}.properties">
+            ant.build.javac.source=1.6
+            ant.build.javac.target=1.6
+        </echo>
+
+        <echo file="${build.portal.src.dir}/app.server.${user.name}.properties">
+            app.server.tomcat.dir=${tomcat.home.dir}
+            app.server.parent.dir=${build.portal.dir}
+        </echo>
+    </target>
+
+    <target name="configure-tomcat" depends="select-environment">
+        <copy todir="${tomcat.home.dir}" overwrite="true">
+            <fileset dir="${conf.dir}/common/portal" />
+            <fileset dir="${conf.dir}/${environment.name}/portal" />
+        </copy>
+    
+        <chmod perm="755" dir="${tomcat.home.dir}/bin"  includes="*.sh" />
+        
+        <delete dir="${tomcat.home.dir}/webapps/examples" />
+        <delete dir="${tomcat.home.dir}/webapps/docs" />
+        <delete dir="${tomcat.home.dir}/webapps/host-manager" />
+        <delete dir="${tomcat.home.dir}/webapps/manager" />
+    </target>
+    
+    <target name="build-ext">
+        <ant dir="${basedir}/liferay-plugins-sdk/ext/portal-ext" inheritAll="false">
+            <target name="clean"/>
+            <target name="direct-deploy"/>
+        </ant>
+    </target>	
+    
+    <target name="build-portal">
+        <ant dir="${build.portal.src.dir}" inheritAll="false">
+            <target name="clean"/>
+            <target name="start"/>
+            <target name="deploy"/>
+        </ant>	
+    </target>
+
+    <target name="install-liferay-plugins">
+        <!-- Download and install any third party plugins here
+        
+        <get src="http://downloads.company.com/kaleo-web-6.1.0.1-ce-ga1-20120106155615760.war"
+             dest="${build.portal.dir}/deploy/kaleo-web-6.1.0.1-ce-ga1-20120106155615760.war" usetimestamp="true" />
+        -->
+    </target>
+
+    <target name="build-plugins">
+        <ant dir="liferay-plugins-sdk" inheritAll="false" />
+    </target>
+    
+    <target name="build" depends="init,
+                                  download-liferay-sources, 
+                                  unzip-liferay-sources, 
+                                  patch-liferay-sources, 
+                                  download-tomcat, 
+                                  unzip-tomcat,
+                                  configure-tomcat,
+                                  configure-build,
+                                  build-portal,
+                                  build-ext,
+                                  build-plugins,
+                                  install-liferay-plugins">
+    </target>
+
+    <target name="dist" depends="build" description="Creates an archive that contains the portal and plugins">
+        <mkdir dir="${dist.dir}"/>
+        
+        <tar destfile="${dist.dir}/portal.tar.gz" compression="gzip" longfile="gnu">
+            <tarfileset dir="${build.portal.dir}" filemode="755">
+                <include name="apache-tomcat/bin/*.sh"/>
+            </tarfileset>
+            <tarfileset dir="${build.portal.dir}" filemode="600">
+                <include name="apache-tomcat/conf/**/*"/>
+            </tarfileset>
+            <tarfileset dir="${build.portal.dir}">
+                 <exclude name="apache-tomcat/bin/*.sh"/>
+                 <exclude name="apache-tomcat/conf/**/*"/>
+                 <exclude name="data/**/*" />
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="clean" description="Cleans the build">
+        <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
+        
+        <ant dir="liferay-plugins-sdk" inheritAll="false">
+            <target name="clean" />
+        </ant>
+    </target>
+
+    <target name="publish" description="Publishes the portal to the remote server" depends="dist">
+        <scp file="${dist.dir}/portal.tar.gz"
+             todir="${build.nightly.credentials.user}@${build.nightly.host}:${build.nightly.upload.dir}" 
+             keyfile="${build.nightly.credentials.keyfile}"
+             passphrase=""
+             trust="true"
+        />
+
+        <sshexec host="${build.nightly.host}"
+                 username="${build.nightly.user}"
+                 keyfile="${build.nightly.keyfile}"
+                 passphrase=""
+                 trust="true"
+                 command="${build.nightly.deploy.script}"
+        />	
+    </target>
+
+</project>

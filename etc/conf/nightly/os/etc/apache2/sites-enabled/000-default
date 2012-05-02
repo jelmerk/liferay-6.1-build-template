@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+        ServerName dev.yourportal.com
+        ServerAdmin admin@dev.yourportal.com
+
+        DocumentRoot /var/www
+
+        RewriteEngine on
+        RewriteRule ^/web/guest(.*) $1 [R=301,L]
+
+        ProxyPreserveHost on
+
+        ProxyPass / ajp://localhost:8009/ nocanon
+        ProxyPassReverse / ajp://localhost:8009/ nocanon
+
+        ErrorLog /var/log/apache2/error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+</VirtualHost>
