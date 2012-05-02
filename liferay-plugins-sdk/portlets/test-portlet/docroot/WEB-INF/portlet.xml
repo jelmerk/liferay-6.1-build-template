@@ -4,7 +4,7 @@
 	<portlet>
 		<portlet-name>test</portlet-name>
 		<display-name>test-portlet</display-name>
-		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<portlet-class>nl.orange11.portlet.TestPortlet</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/view.jsp</value>

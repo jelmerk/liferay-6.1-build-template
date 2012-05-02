@@ -16,6 +16,9 @@ public class TestPortlet extends MVCPortlet {
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
+
         renderRequest.setAttribute("now", new Date());
+
+        super.doView(renderRequest, renderResponse);
     }
 }

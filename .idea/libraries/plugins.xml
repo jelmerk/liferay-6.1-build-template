@@ -17,11 +17,11 @@
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/ext/hsql.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/servlet-api.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/lib/jsp-api.jar!/" />
-      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/commons-lang.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/commons-logging.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-bridges.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-java.jar!/" />
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/util-taglib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/log4j.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
