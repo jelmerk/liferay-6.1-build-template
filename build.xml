@@ -32,7 +32,9 @@
     </target>
 
     <target name="unzip-liferay-sources">
-        <unzip src="${build.downloads.dir}/liferay-portal-src.zip" dest="${build.dir}" overwrite="true"/>
+        <unzip src="${build.downloads.dir}/liferay-portal-src.zip" dest="${build.dir}" overwrite="true">
+            <regexpmapper from="^[^/]+/(.*)$" to="liferay-portal-src/\1"/>
+        </unzip>
     </target>
     
     <target name="patch-liferay-sources">
@@ -49,7 +51,7 @@
 
     <target name="unzip-tomcat" depends="download-tomcat">
         <unzip src="${build.downloads.dir}/tomcat.zip" dest="${build.portal.dir}">
-            <regexpmapper from="^apache-tomcat-[^/]+/(.*)$" to="apache-tomcat/\1"/>
+            <regexpmapper from="^[^/]+/(.*)$" to="apache-tomcat/\1"/>
         </unzip>
     </target>
     
@@ -116,11 +118,11 @@ ${line.separator}"/>
     </target>
 
     <target name="install-liferay-plugins">
-        <!-- Download and install any third party plugins here
+        <get src="http://releases.liferay.com/plugins/6.1.0-ga1/kaleo-web-6.1.0.1-ce-ga1-20120106155615760.war"
+             dest="${build.portal.dir}/deploy/" usetimestamp="true" />
         
-        <get src="http://downloads.company.com/kaleo-web-6.1.0.1-ce-ga1-20120106155615760.war"
-             dest="${build.portal.dir}/deploy/kaleo-web-6.1.0.1-ce-ga1-20120106155615760.war" usetimestamp="true" />
-        -->
+        <get src="http://releases.liferay.com/plugins/6.1.0-ga1/web-form-portlet-6.1.0.1-ce-ga1-20120106155615760.war"
+             dest="${build.portal.dir}/deploy/" usetimestamp="true" />        
     </target>
 
     <target name="build-plugins">
