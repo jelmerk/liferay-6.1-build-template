@@ -183,8 +183,8 @@ ${line.separator}"/>
         />
 
         <sshexec host="${build.nightly.host}"
-                 username="${build.nightly.user}"
-                 keyfile="${build.nightly.keyfile}"
+                 username="${build.nightly.credentials.user}"
+                 keyfile="${build.nightly.credentials.keyfile}"
                  passphrase=""
                  trust="true"
                  command="${build.nightly.deploy.script}"
