@@ -46,7 +46,9 @@ Getting started :
 7. Create the mysql database by issueing the following commands as the root mysql user
 
     drop database if exists liferay;
+    
     create database liferay default character set utf8;
+    
     grant all on liferay.* to liferay@localhost identified by 'liferay';
 
 8. Start the portal by going to build/portal/apache-tomcat/bin and running
