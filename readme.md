@@ -19,29 +19,29 @@ Getting started :
 
 4. Download and unzip the build template on your local machine
 
-5. Customize the template to suit your needs. Things you may want to change are :
+5. Customize the template to suit your needs. Things you may want to change are
 
-The name of the portal and portal host in 
+   The name of the portal and portal host in
 
-liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties
+   liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties
 
-The default locale and timezone in 
+   The default locale and timezone in 
 
-liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties
+   liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties
 
-liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/system-ext.properties
+   liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/system-ext.properties
 
-etc/conf/development/portal/bin/setenv.bat
+   etc/conf/development/portal/bin/setenv.bat
 
-etc/conf/development/portal/bin/setenv.sh
+   etc/conf/development/portal/bin/setenv.sh
 
-etc/conf/nightly/portal/bin/setenv.sh
+   etc/conf/nightly/portal/bin/setenv.sh
 
-etc/conf/production/portal/bin/setenv.sh
+   etc/conf/production/portal/bin/setenv.sh
 
 6. build the portal by issueing the following command in the template folder :
 
-ant clean build
+   ant clean build
 
 7. Create the mysql database by issueing the following commands as the root mysql user
 
@@ -51,32 +51,32 @@ ant clean build
 
 8. Start the portal by going to build/portal/apache-tomcat/bin and running
 
-on windows :
+   on windows :
 
-    catalina.bat run
+      catalina.bat run
 
-    or 
+      or 
 
-    catalina.bat jpda run 
+      catalina.bat jpda run 
 
-    to start up in debug mode
+      to start up in debug mode
     
-on linux :
+   on linux :
 
-    ./catalina.sh run
+      ./catalina.sh run
+
+      or
     
-    OR 
+      ./catalina.sh jpda run
     
-    ./catalina.sh jpda run
-    
-    to start up in debug mode
+   to start up in debug mode
 
 9. To log in as administrator, go to http://localhost:8080 and log in with 
 
-username : administrator@yourportal.com
-password : s3cr3t
+   username : administrator@yourportal.com
+   password : s3cr3t
 
-Or different credentials if you made changes to your portal-ext.properties file in step 5
+   Or different credentials if you made changes to your portal-ext.properties file in step 5
 
 10. Open the project in [intellij idea](http://www.jetbrains.com/idea/) and start working!
 
