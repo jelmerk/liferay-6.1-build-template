@@ -12,6 +12,7 @@ Getting started :
 2. Set the following environment variables
   
    ANT_HOME=/where/you/installed/ant
+   
    ANT_OPTS=-Xms1024m
    
 3. Add ant to your path
