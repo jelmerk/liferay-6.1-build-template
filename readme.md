@@ -28,10 +28,15 @@ liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.prope
 The default locale and timezone in 
 
 liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties
+
 liferay-plugins-sdk/ext/portal-ext/docroot/WEB-INF/ext-impl/src/system-ext.properties
+
 etc/conf/development/portal/bin/setenv.bat
+
 etc/conf/development/portal/bin/setenv.sh
+
 etc/conf/nightly/portal/bin/setenv.sh
+
 etc/conf/production/portal/bin/setenv.sh
 
 6. build the portal by issueing the following command in the template folder :
@@ -40,9 +45,9 @@ ant clean build
 
 7. Create the mysql database by issueing the following commands as the root mysql user
 
-drop database if exists liferay;
-create database liferay default character set utf8;
-grant all on liferay.* to liferay@localhost identified by 'liferay';
+    drop database if exists liferay;
+    create database liferay default character set utf8;
+    grant all on liferay.* to liferay@localhost identified by 'liferay';
 
 8. Start the portal by going to build/portal/apache-tomcat/bin and running
 
