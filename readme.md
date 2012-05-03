@@ -81,5 +81,6 @@ Getting started :
 
    Or different credentials if you made changes to your portal-ext.properties file in step 5
 
-10. Open the project in [intellij idea](http://www.jetbrains.com/idea/) and start working!
+10. Open the project in [intellij idea](http://www.jetbrains.com/idea/) and start working! 
+    Intellij project files are included in the template
 
