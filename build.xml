@@ -68,6 +68,8 @@ ${line.separator}"/>
     
     <target name="configure-build">
         <echo file="${basedir}/liferay-plugins-sdk/build.${user.name}.properties">
+            javac.compiler=modern
+            
             app.server.dir=${tomcat.home.dir}
 
             ext.work.dir=${build.portal.dir}
