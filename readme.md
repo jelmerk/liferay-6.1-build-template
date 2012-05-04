@@ -18,7 +18,7 @@ Getting started :
    
 3. Add ant to your path
 
-4. [Download](https://github.com/downloads/jelmerk/liferay-6.1-build-template/liferay-6.1-build-template.zip) and unzip the build template on your local machine
+4. Download and unzip the [build template](https://github.com/downloads/jelmerk/liferay-6.1-build-template/liferay-6.1-build-template.zip) on your local machine
 
 5. Customize the template to suit your needs. Things you may want to change are
 
