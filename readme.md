@@ -64,7 +64,7 @@ Getting started :
 
       to start up in debug mode
     
-   on linux :
+   on linux and osx :
 
       >./catalina.sh run
 
