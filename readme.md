@@ -4,6 +4,7 @@ Liferay 6.1 ce project template
 Description :
 
 A set of build scripts that make it easy to start a liferay 6.1 project based on the community edition
+To read more about why this template is organized the way it is, read the following [blog post](http://blog.orange11.nl/2012/05/03/liferay-sdk-development-best-practices/) on the orange11 blog
 
 Getting started :
 
