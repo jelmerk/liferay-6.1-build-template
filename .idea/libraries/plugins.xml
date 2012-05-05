@@ -24,6 +24,10 @@
       <root url="jar://$PROJECT_DIR$/build/portal/apache-tomcat/webapps/ROOT/WEB-INF/lib/log4j.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/build/liferay-portal-src/portal-service/src" />
+      <root url="file://$PROJECT_DIR$/build/liferay-portal-src/util-bridges/src" />
+      <root url="file://$PROJECT_DIR$/build/liferay-portal-src/util-taglib/src" />
+    </SOURCES>
   </library>
 </component>
