@@ -14,7 +14,7 @@ Getting started :
   
    >ANT_HOME=/where/you/installed/ant
    >
-   >ANT_OPTS=-Xms1024m
+   >ANT_OPTS=-Xmx1024m -XX:MaxPermSize=512m
    
 3. Add ant to your path
 

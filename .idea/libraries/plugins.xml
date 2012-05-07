@@ -28,6 +28,7 @@
       <root url="file://$PROJECT_DIR$/build/liferay-portal-src/portal-service/src" />
       <root url="file://$PROJECT_DIR$/build/liferay-portal-src/util-bridges/src" />
       <root url="file://$PROJECT_DIR$/build/liferay-portal-src/util-taglib/src" />
+      <root url="file://$PROJECT_DIR$/build/liferay-portal-src/util-java/src" />
     </SOURCES>
   </library>
 </component>
